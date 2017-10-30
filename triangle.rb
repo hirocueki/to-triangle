@@ -1,3 +1,14 @@
+# puts "$0：#{$0}"
+unless ARGV.length == 3
+    puts "invalid args! Please [#{$0} 1, 1, 1]" 
+    exit 
+end
+
+a = ARGV[0].to_i
+b = ARGV[1].to_i
+c = ARGV[2].to_i
+
+
 class Triangle
     def self.ask(a,b,c)
         return "三角形じゃないです＞＜" unless is_triangle(a,b,c)
@@ -18,3 +29,5 @@ class Triangle
         c < a+b
     end
 end
+
+puts Triangle.ask(a,b,c)
